@@ -24,9 +24,9 @@
   e.id = 'janrainAuthWidget';
 
   if(document.location.protocol === 'https:') {
-    e.src = 'https://rpxnow.com/js/lib/<?php echo Mage::helper('engage') -> rpxRealmName() ?>/engage.js';
+    e.src = 'https://rpxnow.com/load/<?php echo Mage::helper('engage')->rpxRealmName()?>';
   } else {
-    e.src = 'http://widget-cdn.rpxnow.com/js/lib/<?php echo Mage::helper('engage') -> rpxRealmName() ?>/engage.js';
+    e.src = 'http://widget-cdn.rpxnow.com/load/<?php echo Mage::helper('engage')->rpxRealmName()?>';
   }
 
   var s = document.getElementsByTagName('script')[0];

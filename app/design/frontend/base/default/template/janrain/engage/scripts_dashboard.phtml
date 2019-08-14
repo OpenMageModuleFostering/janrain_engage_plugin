@@ -7,7 +7,7 @@ if (Mage::helper('engage')->isEngageEnabled()):
             window.janrain = {};
         window.janrain.settings = {};
 
-        janrain.settings.tokenUrl = "<?php echo Mage::getUrl('engage/rpx/token_url_add') ?>";  
+        janrain.settings.tokenUrl = "<?php echo Mage::getUrl('engage/rpx/token_url_add') ?>";
         janrain.settings.appId = "<?php echo Mage::getStoreConfig('engage/vars/appid') ?>";
         janrain.settings.appUrl = "https://<?php echo Mage::getStoreConfig('engage/vars/realm') ?>";
         janrain.settings.type = 'modal';
@@ -27,9 +27,9 @@ if (Mage::helper('engage')->isEngageEnabled()):
         e.id = 'janrainAuthWidget';
 
         if(document.location.protocol === 'https:') {
-            e.src = 'https://rpxnow.com/js/lib/<?php echo Mage::helper('engage') -> rpxRealmName() ?>/engage.js';
+            e.src = 'https://rpxnow.com/load/<?php echo Mage::helper('engage')->rpxRealmName()?>';
         } else {
-            e.src = 'http://widget-cdn.rpxnow.com/js/lib/<?php echo Mage::helper('engage') -> rpxRealmName() ?>/engage.js';
+            e.src = 'http://widget-cdn.rpxnow.com/load/<?php echo Mage::helper('engage')->rpxRealmName()?>';
         }
 
         var s = document.getElementsByTagName('script')[0];
