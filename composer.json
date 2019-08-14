@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Janrain_Engage_Plugin",
+    "type": "magento-module",
+    "license": "ASL",
+    "homepage": "",
+    "description": "Janrain Engage Social Login and Sharing",
+    "authors": [
+    {
+        "name": "Janrain",
+        "email": "magento@janrain.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
