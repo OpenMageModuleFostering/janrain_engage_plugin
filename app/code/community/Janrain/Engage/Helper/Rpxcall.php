@@ -11,6 +11,7 @@ class Janrain_Engage_Helper_Rpxcall extends Mage_Core_Helper_Abstract {
             $lookup_rp = $this->rpxLookupRpCall();
 
             Mage::getModel('core/config')
+                ->saveConfig('engage/vars/externalid', $lookup_rp->externalId)
                 ->saveConfig('engage/vars/realm', $lookup_rp->realm)
                 ->saveConfig('engage/vars/realmscheme', $lookup_rp->realmScheme)
                 ->saveConfig('engage/vars/appid', $lookup_rp->appId)

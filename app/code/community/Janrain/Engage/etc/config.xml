@@ -2,7 +2,7 @@
 <config>
 	<modules>
 		<Janrain_Engage>
-			<version>1.2.3</version>
+			<version>1.2.4</version>
 		</Janrain_Engage>
 	</modules>
 	<frontend>

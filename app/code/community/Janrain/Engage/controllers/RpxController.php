@@ -85,6 +85,7 @@ class Janrain_Engage_RpxController extends Mage_Customer_AccountController {
                     $password = md5('Janrain_Engage_' . Mage::helper('engage')->rand_str(12));
                     $_POST['password'] = $password;
                     $_POST['confirmation'] = $password;
+                    $_POST['email'] = $email;
                     Mage::register('current_customer', $customer);
 
                     $this->_forward('createPost');

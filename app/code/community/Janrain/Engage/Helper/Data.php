@@ -89,10 +89,11 @@ class Janrain_Engage_Helper_Data extends Mage_Core_Helper_Abstract {
      */
     public function getRpxProviders() {
         $providers = Mage::getStoreConfig('engage/vars/enabled_providers');
-        if ($providers)
+        if ($providers) {
             return explode(",", $providers);
-        else
+        } else {
             return false;
+        }
     }
 
     public function buildProfile($auth_info) {
@@ -115,11 +116,8 @@ class Janrain_Engage_Helper_Data extends Mage_Core_Helper_Abstract {
 
         return array('provider' => $this->providers[$auth_info->profile->providerName], 'identifier' => $auth_info->profile->identifier, 'profile_name' => $profile_name);
     }
-	
-    public function rpxRealmName() {
-        $realm = Mage::getStoreConfig('engage/vars/realm');
-        $realm = str_replace(".rpxnow.com", "", $realm);
-        return $realm;
-	}
 
+    public function rpxRealmName() {
+        return Mage::getStoreConfig('engage/vars/externalid');
+    }
 }

@@ -7,6 +7,13 @@
             <block type="core/template" name="janrain_engage_share" template="janrain/engage/share.phtml"/>
         </reference>
     </default>
+
+    <customer_account_index>
+        <reference name='content'>
+            <block type='core/template' name='janrain_engage_dashboard' template='janrain/engage/dashboard.phtml'/>
+        </reference>
+    </customer_account_index>
+
     <!-- Use our own register.phtml with no password fields and custom action -->
     <engage_rpx_token_url>
         <label>Customer Account Registration Form</label>
@@ -26,6 +33,7 @@
             </block>
         </reference>
     </engage_rpx_token_url>
+
     <!-- Ask users what they want to do when they enter an existing customer email address -->
     <engage_rpx_duplicate>
         <label>Customer Account Registration Form</label>

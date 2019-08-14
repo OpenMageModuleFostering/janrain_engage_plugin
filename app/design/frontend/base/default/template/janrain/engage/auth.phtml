@@ -2,8 +2,11 @@
 (function() {
   if (typeof janrain !== "object") window.janrain = {};
   if (typeof janrain.settings !== "object") window.janrain.settings = {};
-
-  janrain.settings.tokenUrl = "<?php echo Mage::getUrl('engage/rpx/token_url') ?>";
+  <?php if (!Mage::getSingleton('customer/session')->isLoggedIn()):?>
+    janrain.settings.tokenUrl = "<?php echo Mage::getUrl('engage/rpx/token_url') ?>";
+  <?php else:?>
+    janrain.settings.tokenUrl = "<?php echo Mage::getUrl('engage/rpx/token_url_add') ?>";
+  <?php endif;?>
   janrain.settings.appId    = "<?php echo Mage::getStoreConfig('engage/vars/appid') ?>";
   janrain.settings.appUrl   = "https://<?php echo Mage::getStoreConfig('engage/vars/realm') ?>";
   janrain.settings.type     = 'embed';
